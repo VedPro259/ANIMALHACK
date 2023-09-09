@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Information</title>
+    <!--copy and paste-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,600;9..40,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/volunteer-info.css">
+
+  </head>
+  <body>
+    <div class="background"><img class="background-img" src="images/frame-with-animals-2.jpg"></div>
+    <div class="title">Listed Volunteer Hours and Dates for Medicine Hat SPCA</div>
+    <div class="reverse">
+      <div class="volunteer-availability">
+        <label>Select available date</label>
+        <input type="date">
+      </div>
+
+      <script type="text/javascript">
+        let number = 0;
+        function docWrite(variable) {
+          // Find the paragraph element by its class name and update its content
+          const paragraph = document.querySelector('.availability');
+          if (paragraph) {
+              paragraph.textContent = `${variable}/3 · `;
+          }
+        }
+      </script>
+    
+
+      <div class="all-volunteer-dates">
+        <div class="enter-name">
+          <label>Name: </label>
+          <input type="text">
+        </div>
+        <div class="volunteer-info-one-date">
+          <p class="date">23-09-08</p>
+          <p class="description">write something cool</p>
+          <p class="third-sub-section">Medicine Hat, Alberta &middot; 9-5 &middot; 13-99</p>
+          <div class="check-volunteering">
+            <p class="availability"></p>
+            <p class="availability"><script>docWrite(number)</script></p>
+            <button onclick="number = number + 1; docWrite(number)" class="volunteer">Volunteer</button>
+          </div>
+        </div>
+        <!--<div class="volunteer-info-one-date">
+          <p class="date">Date</p>
+          <p class="description">Description</p>
+          <p class="third-sub-section">Location &middot; Hours &middot; Age</p>
+          <div class="check-volunteering">
+            <p class="availability">3/3 &middot; </p>
+            <button class="full">Full</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
